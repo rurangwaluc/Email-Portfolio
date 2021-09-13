@@ -1,0 +1,2250 @@
+:root {
+  --pink: #ff9301;
+}
+
+*, *::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  margin: 0;
+  background-color: #0e0e17;
+}
+body .cont {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+body .side-menu {
+  background-color: #0e0e17;
+  height: 100vh;
+  width: 8rem;
+  position: fixed;
+  z-index: 99999999;
+  border-right: 0.1px solid #6c757d;
+}
+body .side-menu li {
+  width: 8rem;
+  height: 6.5rem;
+  border-bottom: 1px solid #6c757d;
+  position: relative;
+}
+body .side-menu li a {
+  width: 100%;
+  height: 100%;
+}
+body .side-menu li a i {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+body .side-menu li:nth-child(2) {
+  margin-top: 5rem;
+}
+body .side-menu li:last-child {
+  border: none;
+}
+body .side-menu #logo {
+  width: 8rem;
+  height: 8rem;
+  background-color: #ff9301;
+  position: relative;
+  border: none;
+}
+body .side-menu #logo span {
+  font-size: 4rem;
+  font-weight: 600;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+body .body-container {
+  width: 100%;
+  height: 100%;
+  padding-left: 5rem;
+}
+body .body-container header {
+  width: 100%;
+  height: 100vh;
+  background: url("img/hero-img.jpg") no-repeat center;
+  background-size: cover;
+}
+body .body-container header .hero-section {
+  padding: 20rem 0 0 10rem;
+  width: 100%;
+}
+body .body-container header .hero-section .hero-title {
+  width: 100%;
+}
+body .body-container header .hero-section .hero-title h6 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin: 0;
+  color: #fff;
+}
+body .body-container header .hero-section .name {
+  padding-top: 1rem;
+}
+body .body-container header .hero-section .name h1 {
+  font-size: 6rem;
+  color: #fff;
+}
+body .body-container header .hero-section .job-title {
+  padding-top: 0rem;
+}
+body .body-container header .hero-section .job-title .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0rem;
+  /* Cursor */
+}
+body .body-container header .hero-section .job-title .container h1, body .body-container header .hero-section .job-title .container h2 {
+  font-weight: 200;
+  margin: 0.4rem;
+}
+body .body-container header .hero-section .job-title .container h1 {
+  font-size: 3.5rem;
+}
+body .body-container header .hero-section .job-title .container h2 {
+  font-size: 2rem;
+  color: #aaa;
+}
+body .body-container header .hero-section .job-title .container .txt-type > .txt {
+  border-right: 0.2rem solid #777;
+}
+@media (min-width: 1200px) {
+  body .body-container header .hero-section .job-title .container h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 800px) {
+  body .body-container header .hero-section .job-title .container .portfolio-container {
+    padding: 0 1rem;
+  }
+  body .body-container header .hero-section .job-title .container h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  body .body-container header .hero-section .job-title .container h1 {
+    font-size: 2.5rem;
+  }
+  body .body-container header .hero-section .job-title .container h2 {
+    font-size: 1.5rem;
+  }
+}
+body .body-container header .hero-section .job-title h1 {
+  font-size: 3rem;
+  color: #ff9301;
+}
+body .body-container header .hero-section .job-description {
+  width: 45rem;
+}
+body .body-container header .hero-section .job-description p {
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+body .body-container header .hero-section .trigger {
+  font-family: inherit;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 35rem;
+  height: 6rem;
+}
+body .body-container header .hero-section .trigger .view a {
+  height: 4rem;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 500;
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+}
+body .body-container header .hero-section .trigger .view a:hover {
+  transition: all 0.5s ease-in-out;
+  border: solid 0.2rem #fff;
+  color: #fff;
+  background: none;
+  cursor: pointer;
+}
+body .body-container .about {
+  background: #0e0e17;
+  display: flex;
+  padding: 0rem 10rem;
+}
+body .body-container .about .about-description {
+  margin-top: 4rem;
+  position: relative;
+  margin: 0rem auto;
+  padding: 3rem;
+}
+body .body-container .about .about-description h3 {
+  position: relative;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+body .body-container .about .about-description p {
+  width: 100%;
+  margin: 0rem auto;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+body .body-container .about .about-description a {
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+body .body-container .about .about-description a:hover {
+  border: 0.1rem solid #fff;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  background: none;
+}
+@keyframes circleAnime {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 1.5%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+body .body-container .skills {
+  background: #0b0b13;
+  position: relative;
+  padding: 5rem 10rem;
+}
+body .body-container .skills h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+}
+body .body-container .skills .skills-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 15rem;
+}
+body .body-container .skills .skills-container .row {
+  width: 33%;
+}
+body .body-container .skills .skills-container .row i {
+  display: inline;
+  margin-right: 2rem;
+  color: #ff9301;
+}
+body .body-container .skills .skills-container .row li {
+  list-style: none;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+}
+body .body-container .projects {
+  position: relative;
+  background: #0e0e17;
+  color: #fff;
+  width: 100%;
+  padding: 5rem 10rem;
+}
+body .body-container .projects h3 {
+  color: #fff;
+  font-size: 3rem;
+}
+body .body-container .projects ul {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+body .body-container .projects ul li {
+  list-style: none;
+  background: #eee;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: #000;
+  font-family: inherit;
+  font-size: 1.3rem;
+}
+body .body-container .projects ul li.active, body .body-container .projects ul li:hover {
+  transition: all 0.4s ease-in-out;
+  background: #ff9301;
+  color: #fff;
+}
+body .body-container .projects .product {
+  display: flex;
+  flex-wrap: wrap;
+}
+body .body-container .projects .product .itemBox {
+  position: relative;
+  height: 40rem;
+  width: 31%;
+  margin: 1rem;
+}
+body .body-container .projects .product .itemBox:hover {
+  overflow: hidden;
+}
+body .body-container .projects .product .itemBox:hover div img {
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+  overflow: hidden;
+}
+body .body-container .projects .product .itemBox:hover .over {
+  visibility: visible;
+}
+body .body-container .projects .product .itemBox div img {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .body-container .projects .product .itemBox .over {
+  overflow: hidden;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body .body-container .projects .product .itemBox .over h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 3rem 0rem 0rem 4rem;
+}
+body .body-container .projects .product .itemBox .over p {
+  color: #fff;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+}
+body .body-container .projects .product .itemBox .over .link {
+  position: inherit;
+  top: 85%;
+  right: 10%;
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+}
+body .body-container .projects .product .itemBox .over .link a {
+  color: #000;
+}
+body .body-container .projects .product .itemBox .over .link a i {
+  font-size: 2rem;
+  padding: 1rem 1rem;
+}
+body .body-container .experience {
+  background: #000;
+  padding: 5rem 10rem 0rem 10rem;
+  height: 50rem;
+}
+body .body-container .experience h3 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+}
+body .body-container .experience .exp {
+  display: flex;
+  background: #0b0b13;
+  border-radius: 0.8rem;
+  padding: 3.5rem;
+  margin-bottom: 2rem;
+}
+body .body-container .experience .exp .exp-title {
+  width: 30%;
+}
+body .body-container .experience .exp .exp-title h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+body .body-container .experience .exp .exp-title p, body .body-container .experience .exp .exp-title h6 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+body .body-container .experience .exp .exp-title h6 {
+  font-style: normal;
+}
+body .body-container .experience .exp .exp-title span {
+  background: #ff9301;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+body .body-container .experience .exp .exp-description {
+  border-left: solid 1e-7px #2b2929;
+  width: 70%;
+  padding-left: 3rem;
+}
+body .body-container .experience .exp .exp-description h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+body .body-container .experience .exp .exp-description p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+body .body-container .contact {
+  background: #0e0e17;
+  padding: 0rem 10rem;
+  display: flex;
+  padding-top: 5rem;
+}
+body .body-container .contact .address {
+  width: 30%;
+  padding-top: 5rem 10rem;
+}
+body .body-container .contact .address h3 {
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+}
+body .body-container .contact .address p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+body .body-container .contact .address div {
+  font-size: 1.4rem;
+}
+body .body-container .contact .address div i {
+  font-size: 1.4rem;
+  padding-right: 2rem;
+  color: #ff9301;
+  margin-bottom: 2rem;
+}
+body .body-container .contact .receive {
+  width: 70%;
+  padding: 1rem 0rem 0rem 9rem;
+}
+body .body-container .contact .receive h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+body .body-container .contact .receive form input {
+  width: 45%;
+  height: 4rem;
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid #2b2929;
+  border-radius: 0.5rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+body .body-container .contact .receive form input::placeholder {
+  font-family: inherit;
+  font-size: 1.5rem;
+}
+body .body-container .contact .receive form input:nth-child(3) {
+  width: 94%;
+  display: block;
+}
+body .body-container .contact .receive form textarea {
+  width: 94%;
+  background: none;
+  font-family: inherit;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  outline: none;
+  border: 1px solid #2b2929;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+body .body-container .contact .receive form button {
+  width: 18rem;
+  height: 4rem;
+  background: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  margin-bottom: 3rem;
+}
+body .body-container .contact .receive form button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .body-container .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  background: #0b0b13;
+  width: 100%;
+}
+body .body-container .footer .icons {
+  display: flex;
+  justify-content: space-between;
+}
+body .body-container .footer .icons a {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+}
+body .body-container .footer .icons a i {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+body .body-container .footer .details p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-top: 1rem;
+}
+@media screen and (max-width: 1200px) {
+  body .body-container {
+    padding-left: 0rem;
+    background-color: #0e0e17;
+  }
+  body .body-container .hero-section {
+    padding: 5rem 0rem 0rem 10rem;
+    width: 100%;
+  }
+  body .body-container .hero-section .hero-title {
+    width: 100%;
+  }
+  body .body-container .hero-section .hero-title h6 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+  }
+  body .body-container .hero-section .name {
+    padding-top: 1rem;
+  }
+  body .body-container .hero-section .name h1 {
+    font-size: 6rem;
+    color: #fff;
+  }
+  body .body-container .hero-section .job-title {
+    padding-top: 0rem;
+  }
+  body .body-container .hero-section .job-title .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0rem;
+    /* Cursor */
+  }
+  body .body-container .hero-section .job-title .container h1, body .body-container .hero-section .job-title .container h2 {
+    font-weight: 200;
+    margin: 0.4rem;
+  }
+  body .body-container .hero-section .job-title .container h1 {
+    font-size: 3.5rem;
+  }
+  body .body-container .hero-section .job-title .container h2 {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  body .body-container .hero-section .job-title .container .txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+}
+@media screen and (max-width: 1200px) and (min-width: 1200px) {
+  body .body-container .hero-section .job-title .container h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 800px) {
+  body .body-container .hero-section .job-title .container .portfolio-container {
+    padding: 0 1rem;
+  }
+  body .body-container .hero-section .job-title .container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1200px) and (max-width: 500px) {
+  body .body-container .hero-section .job-title .container h1 {
+    font-size: 2.5rem;
+  }
+  body .body-container .hero-section .job-title .container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .body-container .hero-section .job-title h1 {
+    font-size: 3rem;
+    color: #ff9301;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .body-container .hero-section .job-description {
+    width: 45rem;
+  }
+  body .body-container .hero-section .job-description p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .body-container .hero-section .trigger {
+    font-family: inherit;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+    height: 6rem;
+  }
+  body .body-container .hero-section .trigger .view a {
+    height: 4rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+  body .body-container .hero-section .trigger .view a:hover {
+    transition: all 0.5s ease-in-out;
+    border: solid 0.2rem #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .body-container .experience {
+    height: 55rem;
+  }
+  body .body-container .experience .exp {
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .body-container .contact {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body .projects {
+    position: relative;
+    background: #0e0e17;
+    color: #fff;
+    width: 100%;
+    padding: 5rem 10rem;
+  }
+  body .projects h3 {
+    color: #fff;
+    font-size: 3rem;
+  }
+  body .projects ul {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+  body .projects ul li {
+    list-style: none;
+    background: #eee;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #000;
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+  body .projects ul li.active, body .projects ul li:hover {
+    transition: all 0.4s ease-in-out;
+    background: #ff9301;
+    color: #fff;
+  }
+  body .projects .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .projects .product .itemBox {
+    position: relative;
+    height: 40rem;
+    width: 30% !important;
+    margin: 1rem;
+  }
+  body .projects .product .itemBox:hover {
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover div img {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover .over {
+    visibility: visible;
+  }
+  body .projects .product .itemBox div img {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body .projects .product .itemBox .over {
+    overflow: hidden;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  body .projects .product .itemBox .over h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 3rem 0rem 0rem 4rem;
+  }
+  body .projects .product .itemBox .over p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+  }
+  body .projects .product .itemBox .over .link {
+    position: inherit;
+    top: 85%;
+    right: 10%;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+  }
+  body .projects .product .itemBox .over .link a {
+    color: #000;
+  }
+  body .projects .product .itemBox .over .link a i {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .header .hero-section {
+    padding: 5rem 0rem 0rem 10rem !important;
+    width: 100%;
+  }
+  body .header .hero-section .hero-title {
+    width: 100%;
+  }
+  body .header .hero-section .hero-title h6 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+  }
+  body .header .hero-section .name {
+    padding-top: 1rem;
+  }
+  body .header .hero-section .name h1 {
+    font-size: 6rem;
+    color: #fff;
+  }
+  body .header .hero-section .job-title {
+    padding-top: 0rem;
+  }
+  body .header .hero-section .job-title .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0rem;
+    /* Cursor */
+  }
+  body .header .hero-section .job-title .container h1, body .header .hero-section .job-title .container h2 {
+    font-weight: 200;
+    margin: 0.4rem;
+  }
+  body .header .hero-section .job-title .container h1 {
+    font-size: 3.5rem;
+  }
+  body .header .hero-section .job-title .container h2 {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  body .header .hero-section .job-title .container .txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 1200px) {
+  body .header .hero-section .job-title .container h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 800px) {
+  body .header .hero-section .job-title .container .portfolio-container {
+    padding: 0 1rem;
+  }
+  body .header .hero-section .job-title .container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 500px) {
+  body .header .hero-section .job-title .container h1 {
+    font-size: 2.5rem;
+  }
+  body .header .hero-section .job-title .container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .header .hero-section .job-title h1 {
+    font-size: 3rem;
+    color: #ff9301;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .header .hero-section .job-description {
+    width: 45rem;
+  }
+  body .header .hero-section .job-description p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .header .hero-section .trigger {
+    font-family: inherit;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+    height: 6rem;
+  }
+  body .header .hero-section .trigger .view a {
+    height: 4rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+  body .header .hero-section .trigger .view a:hover {
+    transition: all 0.5s ease-in-out;
+    border: solid 0.2rem #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .about {
+    height: 43rem;
+  }
+  body .about .about-profile {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .projects {
+    position: relative;
+    background: #0e0e17;
+    color: #fff;
+    width: 100%;
+    padding: 5rem 10rem;
+  }
+  body .projects h3 {
+    color: #fff;
+    font-size: 3rem;
+  }
+  body .projects ul {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+  body .projects ul li {
+    list-style: none;
+    background: #eee;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #000;
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+  body .projects ul li.active, body .projects ul li:hover {
+    transition: all 0.4s ease-in-out;
+    background: #ff9301;
+    color: #fff;
+  }
+  body .projects .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .projects .product .itemBox {
+    position: relative;
+    height: 40rem;
+    width: 46% !important;
+    margin: 1rem;
+  }
+  body .projects .product .itemBox:hover {
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover div img {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover .over {
+    visibility: visible;
+  }
+  body .projects .product .itemBox div img {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body .projects .product .itemBox .over {
+    overflow: hidden;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  body .projects .product .itemBox .over h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 3rem 0rem 0rem 4rem;
+  }
+  body .projects .product .itemBox .over p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+  }
+  body .projects .product .itemBox .over .link {
+    position: inherit;
+    top: 85%;
+    right: 10%;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+  }
+  body .projects .product .itemBox .over .link a {
+    color: #000;
+  }
+  body .projects .product .itemBox .over .link a i {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .experience {
+    background: #000;
+    padding: 5rem 10rem 0rem 10rem;
+    height: 65rem !important;
+  }
+  body .experience h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .experience .exp {
+    display: flex;
+    background: #0b0b13;
+    border-radius: 0.8rem;
+    padding: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-title {
+    width: 30%;
+  }
+  body .experience .exp .exp-title h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title p, body .experience .exp .exp-title h6 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title h6 {
+    font-style: normal;
+  }
+  body .experience .exp .exp-title span {
+    background: #ff9301;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-description {
+    border-left: solid 1e-7px #2b2929;
+    width: 70%;
+    padding-left: 3rem;
+  }
+  body .experience .exp .exp-description h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-description p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .contact {
+    width: 100%;
+    background: #0e0e17;
+    padding: 0rem 10rem;
+    display: flex;
+    padding-top: 5rem;
+    flex-direction: column;
+  }
+  body .contact .address {
+    width: 100% !important;
+    padding-top: 5rem 10rem;
+  }
+  body .contact .address h3 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+  }
+  body .contact .address p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  body .contact .address div {
+    font-size: 1.4rem;
+  }
+  body .contact .address div i {
+    font-size: 1.4rem;
+    padding-right: 2rem;
+    color: #ff9301;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive {
+    width: 100% !important;
+    padding: 1rem 0rem 0rem 2rem !important;
+  }
+  body .contact .receive h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive form {
+    width: 100% !important;
+  }
+  body .contact .receive form input {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem 2rem;
+    background: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+  }
+  body .contact .receive form input::placeholder {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form input:nth-child(3) {
+    width: 94%;
+    display: block;
+  }
+  body .contact .receive form textarea {
+    width: 94%;
+    background: none;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    outline: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form button {
+    width: 18rem;
+    height: 4rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  body .contact .receive form button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .side-menu {
+    display: none;
+  }
+  body .hero-section {
+    padding: 3rem 0 0 2rem !important;
+    width: 100%;
+  }
+  body .hero-section .hero-title {
+    width: 100%;
+  }
+  body .hero-section .hero-title h6 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin: 0;
+    color: #fff;
+  }
+  body .hero-section .name {
+    padding-top: 1rem;
+  }
+  body .hero-section .name h1 {
+    font-size: 4.5rem !important;
+    color: #fff;
+  }
+  body .hero-section .job-title {
+    padding-top: 0rem;
+  }
+  body .hero-section .job-title .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0rem;
+    /* Cursor */
+  }
+  body .hero-section .job-title .container h1, body .hero-section .job-title .container h2 {
+    font-weight: 200;
+    margin: 0.4rem;
+  }
+  body .hero-section .job-title .container h1 {
+    font-size: 3.5rem;
+  }
+  body .hero-section .job-title .container h2 {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  body .hero-section .job-title .container .txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+}
+@media screen and (max-width: 414px) and (min-width: 1200px) {
+  body .hero-section .job-title .container h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 414px) and (max-width: 800px) {
+  body .hero-section .job-title .container .portfolio-container {
+    padding: 0 1rem;
+  }
+  body .hero-section .job-title .container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 414px) and (max-width: 500px) {
+  body .hero-section .job-title .container h1 {
+    font-size: 2.5rem;
+  }
+  body .hero-section .job-title .container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .hero-section .job-title h1 {
+    font-size: 3rem;
+    color: #ff9301;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .hero-section .job-description {
+    width: 100% !important;
+  }
+  body .hero-section .job-description p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.4rem !important;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .hero-section .trigger {
+    font-family: inherit;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+    height: 6rem;
+  }
+  body .hero-section .trigger .view a {
+    height: 4rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+  body .hero-section .trigger .view a:hover {
+    transition: all 0.5s ease-in-out;
+    border: solid 0.2rem #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .about {
+    width: 100% !important;
+    background: #0e0e17;
+    display: flex;
+    padding: 0rem 2rem !important;
+    height: 45rem !important;
+  }
+  body .about .about-profile {
+    margin-top: 6rem;
+    width: 100%;
+    height: 40rem;
+  }
+  body .about .about-profile .image {
+    width: 65%;
+    height: 35rem;
+    background: url("img/profile.jpg") no-repeat top;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0rem auto;
+  }
+  body .about .about-description {
+    margin-top: 4rem;
+    position: relative;
+  }
+  body .about .about-description h3 {
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  body .about .about-description p {
+    width: 100% !important;
+    font-size: 1.4rem !important;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  body .about .about-description a {
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+  body .about .about-description a:hover {
+    border: 0.1rem solid #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    background: none;
+  }
+  @keyframes circleAnime {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: 1.5%;
+    }
+    100% {
+      top: 0%;
+    }
+  }
+}
+@media screen and (max-width: 414px) {
+  body .skills {
+    background: #0b0b13;
+    position: relative;
+    padding: 5rem 2rem !important;
+  }
+  body .skills h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .skills .skills-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 0rem !important;
+  }
+  body .skills .skills-container .row {
+    width: 33%;
+  }
+  body .skills .skills-container .row i {
+    display: inline;
+    margin-right: 0.5rem !important;
+    color: #ff9301;
+  }
+  body .skills .skills-container .row li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .projects {
+    position: relative;
+    background: #0e0e17;
+    color: #fff;
+    width: 100%;
+    padding: 5rem 2rem !important;
+  }
+  body .projects h3 {
+    color: #fff;
+    font-size: 3rem;
+  }
+  body .projects ul {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+  body .projects ul li {
+    list-style: none;
+    background: #eee;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #000;
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+  body .projects ul li.active, body .projects ul li:hover {
+    transition: all 0.4s ease-in-out;
+    background: #ff9301;
+    color: #fff;
+  }
+  body .projects .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .projects .product .itemBox {
+    position: relative;
+    height: 40rem;
+    width: 90% !important;
+    margin: 1rem;
+  }
+  body .projects .product .itemBox:hover {
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover div img {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover .over {
+    visibility: visible;
+  }
+  body .projects .product .itemBox div img {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body .projects .product .itemBox .over {
+    overflow: hidden;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  body .projects .product .itemBox .over h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 3rem 0rem 0rem 4rem;
+  }
+  body .projects .product .itemBox .over p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+  }
+  body .projects .product .itemBox .over .link {
+    position: inherit;
+    top: 85%;
+    right: 10%;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+  }
+  body .projects .product .itemBox .over .link a {
+    color: #000;
+  }
+  body .projects .product .itemBox .over .link a i {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .experience {
+    background: #000;
+    padding: 5rem 2rem 0rem 2rem !important;
+    height: 80rem !important;
+  }
+  body .experience h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .experience .exp {
+    display: flex;
+    background: #0b0b13;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    padding: 2rem !important;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-title {
+    width: 100% !important;
+  }
+  body .experience .exp .exp-title h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title p, body .experience .exp .exp-title h6 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title h6 {
+    font-style: normal;
+  }
+  body .experience .exp .exp-title span {
+    background: #ff9301;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-description {
+    border: none !important;
+    width: 100% !important;
+    padding: 2rem 0rem 0rem 0rem !important;
+  }
+  body .experience .exp .exp-description h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-description p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .contact {
+    background: #0e0e17;
+    padding: 0rem 2rem !important;
+    display: flex;
+    padding-top: 5rem;
+  }
+  body .contact .address {
+    width: 30%;
+    padding-top: 5rem 10rem;
+  }
+  body .contact .address h3 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+  }
+  body .contact .address p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  body .contact .address div {
+    font-size: 1.4rem;
+  }
+  body .contact .address div i {
+    font-size: 1.4rem;
+    padding-right: 2rem;
+    color: #ff9301;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive {
+    width: 100% !important;
+    padding: 1rem 0rem 0rem 0rem !important;
+  }
+  body .contact .receive h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive form {
+    width: 100% !important;
+  }
+  body .contact .receive form input {
+    width: 44% !important;
+    height: 4rem;
+    padding: 1rem !important;
+    background: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+  }
+  body .contact .receive form input::placeholder {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form input:nth-child(2) {
+    margin-right: 0rem !important;
+  }
+  body .contact .receive form input:nth-child(3) {
+    width: 94% !important;
+    display: block;
+  }
+  body .contact .receive form textarea {
+    width: 94%;
+    background: none;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    outline: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form button {
+    width: 18rem;
+    height: 4rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  body .contact .receive form button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+@media screen and (max-width: 414px) {
+  body .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem !important;
+    flex-direction: column;
+    background: #0b0b13;
+    width: 100%;
+  }
+  body .footer .icons {
+    width: 50% !important;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  body .footer .icons a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+  }
+  body .footer .icons a i {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+  body .footer .details p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  body .experience {
+    background: #000;
+    padding: 5rem 10rem 0rem 10rem;
+    height: 83rem !important;
+  }
+  body .experience h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .experience .exp {
+    display: flex;
+    background: #0b0b13;
+    border-radius: 0.8rem;
+    padding: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-title {
+    width: 30%;
+  }
+  body .experience .exp .exp-title h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title p, body .experience .exp .exp-title h6 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title h6 {
+    font-style: normal;
+  }
+  body .experience .exp .exp-title span {
+    background: #ff9301;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-description {
+    border-left: solid 1e-7px #2b2929;
+    width: 70%;
+    padding-left: 3rem;
+  }
+  body .experience .exp .exp-description h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-description p {
+    font-size: 1.5rem;
+  }
+  body .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem !important;
+    flex-direction: column;
+    background: #0b0b13;
+    width: 100%;
+  }
+  body .footer .icons {
+    width: 50% !important;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  body .footer .icons a {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+  }
+  body .footer .icons a i {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+  body .footer .details p {
+    font-size: 1.2rem !important;
+    font-weight: 300;
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .hero-section {
+    padding: 20rem 0 0 30rem !important;
+    width: 100%;
+  }
+  body .hero-section .hero-title {
+    width: 100%;
+  }
+  body .hero-section .hero-title h6 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    color: #fff;
+  }
+  body .hero-section .name {
+    padding-top: 1rem;
+  }
+  body .hero-section .name h1 {
+    font-size: 6rem;
+    color: #fff;
+  }
+  body .hero-section .job-title {
+    padding-top: 0rem;
+  }
+  body .hero-section .job-title .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0rem;
+    /* Cursor */
+  }
+  body .hero-section .job-title .container h1, body .hero-section .job-title .container h2 {
+    font-weight: 200;
+    margin: 0.4rem;
+  }
+  body .hero-section .job-title .container h1 {
+    font-size: 3.5rem;
+  }
+  body .hero-section .job-title .container h2 {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  body .hero-section .job-title .container .txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+}
+@media screen and (min-width: 1900px) and (min-width: 1200px) {
+  body .hero-section .job-title .container h1 {
+    font-size: 5rem;
+  }
+}
+@media screen and (min-width: 1900px) and (max-width: 800px) {
+  body .hero-section .job-title .container .portfolio-container {
+    padding: 0 1rem;
+  }
+  body .hero-section .job-title .container h1 {
+    font-size: 3rem;
+  }
+}
+@media screen and (min-width: 1900px) and (max-width: 500px) {
+  body .hero-section .job-title .container h1 {
+    font-size: 2.5rem;
+  }
+  body .hero-section .job-title .container h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .hero-section .job-title h1 {
+    font-size: 3rem;
+    color: #ff9301;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .hero-section .job-description {
+    width: 45rem;
+  }
+  body .hero-section .job-description p {
+    line-height: 1.6;
+    font-weight: 300;
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .hero-section .trigger {
+    font-family: inherit;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 35rem;
+    height: 6rem;
+  }
+  body .hero-section .trigger .view a {
+    height: 4rem;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+  }
+  body .hero-section .trigger .view a:hover {
+    transition: all 0.5s ease-in-out;
+    border: solid 0.2rem #fff;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .about {
+    background: #0e0e17;
+    display: flex;
+    padding: 0rem 30rem !important;
+  }
+  body .about .about-profile {
+    margin-top: 6rem;
+    width: 50%;
+    height: 40rem;
+  }
+  body .about .about-profile .image {
+    width: 65%;
+    height: 35rem;
+    background: url("img/profile.jpg") no-repeat top;
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0rem auto;
+  }
+  body .about .about-description {
+    margin-top: 4rem;
+    position: relative;
+  }
+  body .about .about-description h3 {
+    position: relative;
+    font-size: 3rem;
+    margin-bottom: 4rem;
+  }
+  body .about .about-description p {
+    width: 55rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+  }
+  body .about .about-description a {
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+  }
+  body .about .about-description a:hover {
+    border: 0.1rem solid #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    background: none;
+  }
+  @keyframes circleAnime {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: 1.5%;
+    }
+    100% {
+      top: 0%;
+    }
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .skills {
+    background: #0b0b13;
+    position: relative;
+    padding: 5rem 30rem !important;
+  }
+  body .skills h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .skills .skills-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 15rem;
+  }
+  body .skills .skills-container .row {
+    width: 33%;
+  }
+  body .skills .skills-container .row i {
+    display: inline;
+    margin-right: 2rem;
+    color: #ff9301;
+  }
+  body .skills .skills-container .row li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .projects {
+    position: relative;
+    background: #0e0e17;
+    color: #fff;
+    width: 100%;
+    padding: 5rem 30rem !important;
+  }
+  body .projects h3 {
+    color: #fff;
+    font-size: 3rem;
+  }
+  body .projects ul {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+  body .projects ul li {
+    list-style: none;
+    background: #eee;
+    padding: 0.8rem 2rem;
+    margin: 0.5rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: #000;
+    font-family: inherit;
+    font-size: 1.3rem;
+  }
+  body .projects ul li.active, body .projects ul li:hover {
+    transition: all 0.4s ease-in-out;
+    background: #ff9301;
+    color: #fff;
+  }
+  body .projects .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body .projects .product .itemBox {
+    position: relative;
+    height: 40rem;
+    width: 31%;
+    margin: 1rem;
+  }
+  body .projects .product .itemBox:hover {
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover div img {
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  body .projects .product .itemBox:hover .over {
+    visibility: visible;
+  }
+  body .projects .product .itemBox div img {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  body .projects .product .itemBox .over {
+    overflow: hidden;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  body .projects .product .itemBox .over h3 {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 3rem 0rem 0rem 4rem;
+  }
+  body .projects .product .itemBox .over p {
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 4rem;
+  }
+  body .projects .product .itemBox .over .link {
+    position: inherit;
+    top: 85%;
+    right: 10%;
+    width: 4rem;
+    height: 4rem;
+    background-color: #fff;
+  }
+  body .projects .product .itemBox .over .link a {
+    color: #000;
+  }
+  body .projects .product .itemBox .over .link a i {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .experience {
+    background: #000;
+    padding: 5rem 30rem 0rem 30rem !important;
+    height: 50rem;
+  }
+  body .experience h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: inherit;
+  }
+  body .experience .exp {
+    display: flex;
+    background: #0b0b13;
+    border-radius: 0.8rem;
+    padding: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-title {
+    width: 30%;
+  }
+  body .experience .exp .exp-title h4 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title p, body .experience .exp .exp-title h6 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-title h6 {
+    font-style: normal;
+  }
+  body .experience .exp .exp-title span {
+    background: #ff9301;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  body .experience .exp .exp-description {
+    border-left: solid 1e-7px #2b2929;
+    width: 70%;
+    padding-left: 3rem;
+  }
+  body .experience .exp .exp-description h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  body .experience .exp .exp-description p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body .contact {
+    background: #0e0e17;
+    padding: 5rem 30rem !important;
+    display: flex;
+    padding-top: 5rem;
+  }
+  body .contact .address {
+    width: 30%;
+    padding-top: 5rem 10rem;
+  }
+  body .contact .address h3 {
+    font-size: 3.4rem;
+    margin-bottom: 1rem;
+  }
+  body .contact .address p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  body .contact .address div {
+    font-size: 1.4rem;
+  }
+  body .contact .address div i {
+    font-size: 1.4rem;
+    padding-right: 2rem;
+    color: #ff9301;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive {
+    width: 70%;
+    padding: 1rem 0rem 0rem 9rem;
+  }
+  body .contact .receive h3 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  body .contact .receive form input {
+    width: 45%;
+    height: 4rem;
+    padding: 1rem 2rem;
+    background: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    outline: none;
+    color: #fff;
+    font-family: inherit;
+  }
+  body .contact .receive form input::placeholder {
+    font-family: inherit;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form input:nth-child(3) {
+    width: 94%;
+    display: block;
+  }
+  body .contact .receive form textarea {
+    width: 94%;
+    background: none;
+    font-family: inherit;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    outline: none;
+    border: 1px solid #2b2929;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+  }
+  body .contact .receive form button {
+    width: 18rem;
+    height: 4rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+  }
+  body .contact .receive form button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+body .cursor-container .cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+}
+body .cursor-container .cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+body .cursor-container .expand {
+  animation: cursorAnim3 0.5s forwards;
+  border: 1px solid #ff9301;
+}
+body .cursor-container p {
+  color: white;
+  font-family: "arial";
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.4em;
+}
+body .cursor-container p a {
+  color: teal;
+}
+
+/*# sourceMappingURL=main.css.map */
