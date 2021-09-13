@@ -1356,7 +1356,7 @@ body .body-container .footer .details p {
   }
   body .skills .skills-container .row li {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 0.5rem;
     font-weight: 300;
   }
@@ -1382,7 +1382,7 @@ body .body-container .footer .details p {
   body .projects ul li {
     list-style: none;
     background: #eee;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 1rem;
     margin: 0.5rem;
     letter-spacing: 0.1rem;
     cursor: pointer;
